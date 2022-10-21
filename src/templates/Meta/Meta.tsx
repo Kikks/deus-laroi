@@ -4,11 +4,7 @@ import { NextSeo } from 'next-seo';
 
 import { AppConfig } from '@/utils/AppConfig';
 
-type IMetaProps = {
-  title: string;
-  description: string;
-  canonical?: string;
-};
+import type IMetaProps from './Meta.props';
 
 const Meta = (props: IMetaProps) => {
   const router = useRouter();
@@ -63,4 +59,4 @@ const Meta = (props: IMetaProps) => {
   );
 };
 
-export { Meta };
+export default Meta;

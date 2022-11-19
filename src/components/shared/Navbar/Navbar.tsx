@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import type { FC } from 'react';
 
 import Button from '@/components/lib/Button';
@@ -31,6 +32,8 @@ const linkVariant = {
 };
 
 const Navbar: FC<NavbarProps> = ({ onMenuClicked }) => {
+  const router = useRouter();
+
   return (
     <nav className="w-full bg-white px-5 py-3 lg:px-10">
       <div className="container flex items-center justify-between">
@@ -68,7 +71,15 @@ const Navbar: FC<NavbarProps> = ({ onMenuClicked }) => {
             {links.map((item, index) => (
               <motion.div variants={linkVariant} key={index}>
                 <Link href={item.url}>
-                  <a>{item.title}</a>
+                  <a
+                    className={
+                      item.url === router.pathname
+                        ? 'text-primary-main'
+                        : 'text-tertiary-main'
+                    }
+                  >
+                    {item.title}
+                  </a>
                 </Link>
               </motion.div>
             ))}
@@ -82,9 +93,11 @@ const Navbar: FC<NavbarProps> = ({ onMenuClicked }) => {
               transition: { delay: 0.4, duration: 0.5 },
             }}
           >
-            <Button>
-              <span>Get in touch</span>
-            </Button>
+            <Link href="/contact">
+              <Button>
+                <span>Get in touch</span>
+              </Button>
+            </Link>
           </motion.div>
         </div>
 

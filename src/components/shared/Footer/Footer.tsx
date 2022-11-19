@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-main px-5 pt-20 pb-10 text-white md:px-10 lg:p-20 lg:pb-5">
+    <footer className="bg-primary-main/60 px-5 pt-20 pb-10 text-tertiary-main md:px-10 lg:p-20 lg:pb-5">
       <div className="container flex w-full flex-col gap-20">
         <div className="flex w-full flex-col justify-between gap-10 md:gap-20 lg:flex-row lg:gap-20">
           <div className="order-2 flex flex-1 flex-col gap-3 lg:order-1">
@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between gap-5 border-t border-white pt-3 text-sm md:flex-row md:items-center md:text-base">
+        <div className="flex flex-col justify-between gap-5 border-t border-tertiary-main pt-3 text-sm md:flex-row md:items-center md:text-base">
           <span>© 2022 De ‘La Roi Limited. All Rights Reserved</span>
 
           <Link href="/privacy-policy">

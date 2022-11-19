@@ -12,7 +12,10 @@ const Index = () => {
   return (
     <Main
       meta={
-        <Meta title={AppConfig.title} description={AppConfig.description} />
+        <Meta
+          title={`Home | ${AppConfig.title}`}
+          description={AppConfig.description}
+        />
       }
     >
       <Header />

@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 import Button from '@/components/lib/Button';
 import { AppConfig } from '@/utils/AppConfig';
@@ -62,12 +63,14 @@ const Header = () => {
           </motion.span>
 
           <motion.div variants={textVariant} className="hidden md:block">
-            <Button>
-              <div className="flex items-center gap-3">
-                <span>Let’s talk about your project</span>
-                <Icon icon="charm:chevron-right" />
-              </div>
-            </Button>
+            <Link href="/contact">
+              <Button>
+                <div className="flex items-center gap-3">
+                  <span>Let’s talk about your project</span>
+                  <Icon icon="charm:chevron-right" />
+                </div>
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

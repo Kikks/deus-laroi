@@ -47,7 +47,7 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                <Link href="/services">
+                <Link href={`/services${service.link}`}>
                   <a
                     href=""
                     className="flex items-end gap-2 font-garamond text-xl text-secondary-dark lg:text-2xl"

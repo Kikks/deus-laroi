@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
 import Button from '@/components/lib/Button';
 
@@ -22,12 +23,14 @@ const Contact = () => {
           <span>Contact Deus ‘La Roi Limited for your construction needs</span>
         </div>
 
-        <Button>
-          <div className="flex items-center gap-3">
-            <span>Let’s talk about your project</span>
-            <Icon icon="charm:chevron-right" />
-          </div>
-        </Button>
+        <Link href="/contact">
+          <Button>
+            <div className="flex items-center gap-3">
+              <span>Let’s talk about your project</span>
+              <Icon icon="charm:chevron-right" />
+            </div>
+          </Button>
+        </Link>
       </div>
     </section>
   );

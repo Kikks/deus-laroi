@@ -1,0 +1,15 @@
+.hero {
+  background-position: top center;
+  background-size: cover;
+}
+
+.glass_overlay {
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(51, 51, 51, 0.6);
+  backdrop-filter: blur(8px);
+
+  @media screen and (max-width: 600px) {
+    backdrop-filter: blur(5px);
+  }
+}

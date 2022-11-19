@@ -25,7 +25,7 @@ const TopDrawer: FC<TopDrawerProps> = ({ isOpen, onClose }) => {
 
   return isOpen ? (
     <aside
-      className={`fixed top-0 left-0 z-20 flex max-h-screen w-screen flex-col items-center gap-10 overflow-y-auto bg-white py-10 shadow-lg duration-500 ${
+      className={`fixed top-0 left-0 z-50 flex max-h-screen w-screen flex-col items-center gap-10 overflow-y-auto bg-white py-10 shadow-lg duration-500 ${
         show ? 'translate-y-0' : 'translate-y-[-150vh]'
       }`}
     >
